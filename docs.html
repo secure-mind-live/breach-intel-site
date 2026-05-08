@@ -363,7 +363,7 @@
           <pre><span class="prompt">$</span> <span class="cmd">docker compose up --build</span>
 <span class="prompt">$</span> <span class="cmd">pip install -e sdk/</span>
 <span class="prompt">$</span> <span class="cmd">breach-intel install-hook</span>
-<span class="prompt">$</span> <span class="cmd">export BREACH_INTEL_URL=http://localhost:8080</span>
+<span class="prompt">$</span> <span class="cmd">export BREACH_INTEL_URL=http://localhost:8081</span>
 <span class="prompt">$</span> <span class="cmd">export BREACH_INTEL_TOKEN=&lt;your-api-key&gt;</span></pre>
         </div>
 
@@ -376,7 +376,7 @@
         <table class="config-table">
           <thead><tr><th>Variable</th><th>Type</th><th>Description</th></tr></thead>
           <tbody>
-            <tr><td class="key">BREACH_INTEL_URL</td><td class="type">string</td><td>Policy agent URL (e.g. http://localhost:8080)</td></tr>
+            <tr><td class="key">BREACH_INTEL_URL</td><td class="type">string</td><td>Policy agent URL (e.g. http://localhost:8081)</td></tr>
             <tr><td class="key">BREACH_INTEL_TOKEN</td><td class="type">string</td><td>Agent-scoped API key for authentication</td></tr>
             <tr><td class="key">BREACH_INTEL_LICENSE_KEY</td><td class="type">string</td><td>Pro/Enterprise license key (optional)</td></tr>
             <tr><td class="key">BREACH_INTEL_DB_URL</td><td class="type">string</td><td>Database URL (default: SQLite, Pro: PostgreSQL)</td></tr>
@@ -422,7 +422,7 @@
           <span class="code-lang">bash</span>
           <button class="copy-btn" onclick="copyCode(this)">Copy</button>
           <pre><span class="prompt">$</span> <span class="cmd">breach-intel doctor</span>
-<span class="comment">✓ BREACH_INTEL_URL = http://localhost:8080</span>
+<span class="comment">✓ BREACH_INTEL_URL = http://localhost:8081</span>
 <span class="comment">✓ Persistent hook installed</span>
 <span class="comment">✓ Detected frameworks: OpenAI, Anthropic</span>
 <span class="comment">✓ Server health: OK (v0.3.1)</span>
@@ -496,7 +496,7 @@
         <div class="code-block">
           <span class="code-lang">bash</span>
           <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-          <pre><span class="prompt">$</span> <span class="cmd">open "http://localhost:8080/dashboard/?token=$(cat ~/.breach-intel/agent_token)"</span></pre>
+          <pre><span class="prompt">$</span> <span class="cmd">open "http://localhost:8081/dashboard/?token=$(cat ~/.breach-intel/agent_token)"</span></pre>
         </div>
         <p>Features: breach counts by severity, agent heatmaps, live breach feed (last 50), click-to-inspect detail view with full payload, vertical distribution chart, and instance info.</p>
         <div class="callout info"><strong>Note:</strong> The <code>?token=</code> param is auto-saved to localStorage and stripped from the URL bar. If the token expires, the Configure panel opens automatically.</div>

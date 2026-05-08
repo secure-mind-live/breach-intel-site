@@ -293,8 +293,8 @@
 <span class="output">  → Logged (SHA-256: <span class="flag">a3f8c1...</span>)</span>
 <span class="output">  → Webhook fired to Slack</span>
 
-<span class="prompt">$</span> <span class="cmd">open</span> <span class="url">localhost:8080/dashboard/</span>
-<span class="success">✓ 21 breaches across 5 agents</span>
+<span class="prompt">$</span> <span class="cmd">open</span> <span class="url">localhost:8081/unified</span>
+<span class="success">✓ 21 breaches across 5 agents — unified dashboard</span>
       </div>
     </div>
   </section>
@@ -364,8 +364,13 @@
         </div>
         <div class="card">
           <div class="card-icon blue">📊</div>
-          <h3>Live Dashboard</h3>
-          <p>Breach counts, severity breakdown, agent heatmaps, live feed, click-to-inspect detail views.</p>
+          <h3>Unified Dashboard</h3>
+          <p>Gateway stats + breach data in a single view. Gateway DLP card, recent blocks feed, severity heatmaps, agent breakdown — all from one port.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon orange">🌉</div>
+          <h3>Gateway Bridge</h3>
+          <p>DLP blocks and PII detections auto-emit to breach engine. Fire-and-forget — gateway never slows down. Every block becomes a classified breach event.</p>
         </div>
         <div class="card">
           <div class="card-icon">🔌</div>
@@ -443,7 +448,7 @@
                            <span class="arrow">│</span>  <span class="detail">auto-intercepted LLM response</span>
                            <span class="arrow">▼</span>
 <span class="layer">┌─────────────────────────────────────────────────────────────┐</span>
-<span class="layer">│</span>  <span class="highlight">Policy Agent</span> <span class="detail">(FastAPI · :8080)</span>                              <span class="layer">│</span>
+<span class="layer">│</span>  <span class="highlight">Policy Agent</span> <span class="detail">(FastAPI · :8081)</span>                              <span class="layer">│</span>
 <span class="layer">│</span>                                                             <span class="layer">│</span>
 <span class="layer">│</span>  <span class="arrow">1.</span> <span class="component">Auth + Rate Limit</span>   <span class="detail">→ scoped API keys, 300/min</span>       <span class="layer">│</span>
 <span class="layer">│</span>  <span class="arrow">2.</span> <span class="component">Auto-Register</span>       <span class="detail">→ first event? register agent</span>    <span class="layer">│</span>
@@ -468,7 +473,7 @@
       <div class="section-header center fade-in">
         <div class="section-eyebrow"><span class="dot"></span> Dashboard</div>
         <h2 class="section-title">See everything. In real time.</h2>
-        <p class="section-sub">Breach counts, severity breakdowns, agent heatmaps, and a live feed — all in a single-file React SPA.</p>
+        <p class="section-sub">Gateway blocks, PII detections, breach classifications, severity heatmaps, and agent breakdowns — unified in a single-port dashboard.</p>
       </div>
       <div class="fade-in" style="border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-xl);">
         <img src="dashboard-screenshot.png" alt="Breach Intel Dashboard" style="width:100%;display:block;">
